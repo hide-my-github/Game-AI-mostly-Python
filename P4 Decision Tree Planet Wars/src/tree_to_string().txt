@@ -1,0 +1,13 @@
+INFO:root:
+Selector: High Level Ordering of Strategies
+| Sequence: Quick Attack Sequence
+| | Check: enemy_fleets_exist
+| | Action: quick_attack
+| Sequence: Spread Strategy
+| | Check: if_neutral_planet_available
+| | Action: spread_to_most_efficient_neutral_planet
+| Sequence: Offensive Strategy
+| | Check: have_planets_not_my_own
+| | Check: more_enemies_than_neutrals
+| | Action: settarget
+| Action: attack_weakest_enemy_planet

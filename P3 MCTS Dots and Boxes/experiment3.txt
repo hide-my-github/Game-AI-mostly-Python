@@ -1,0 +1,17 @@
+Experiment 3
+
+We commented out the while-loop that enables the time feature, 
+just make sure to comment out the for-loop before it.
+
+When we first thought about doing time, we thought it would be a great idea. 
+However alloting 1 whole second for a single move is way too much considering
+how the bots don't take a drastic amount of time (even at 1000 num_nodes). We
+do know that our mcts_modified tree will be smaller than the mcts_vanilla tree,
+because we've set break points to allow our bot to auto-pick clearly good moves.
+So just with this set, we know the tree will stop growing and be smaller.
+
+If the time limit was at 0.1s or less, the bots won't be able to fully expand
+their tree and will have to make a decision off the available nodes. In most cases
+the modified version will still trump vanilla due to a smart-picking constraint that
+eliminates all moves that could lead to a potential score for the opponent (unless 
+there are NO good moves).

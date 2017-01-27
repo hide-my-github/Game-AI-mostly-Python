@@ -1,0 +1,79 @@
+Experiment 1 - Tree Size..0
+
+FINAL ANALYSIS
+	As both vanilla's are pinned against each other, the main drawback of vanilla is that there is no true intuition in these machines.
+	Yes they look ahead and find the most likely choice that results in a win, but there are still instances where the bot doesn't select
+	a move that immediately gets them a point. Since the bots can do successive moves on scoring, their goal must be to get points as soon
+	as they can. Without this logic, vanilla often chooses the wrong move. Since both bots are vanilla, it's expected that the win rates 
+	hover around ~50%. What is surprising is that Blue seems to always win a bit more than Red and we don't exactly know why. There are 
+	definitely cases of red winning, just over the five test games, they lose overall and they lose consistently. 
+	Since our mcts_vanilla only does a single rollout given the node we're on, it is possible for the randomness to work
+	against us. If we were to do multiple rollouts on a single node then perhaps the winrates would be much closer to 50%.
+
+
+TESTS
+We decided to run 5 tests per tree size to get the average. Didn't make use of pyplot, so sorry if there was an expected image.
+
+BLUE_NUM_NODES:  100
+RED_NUM_NODES:  100
+
+Final win counts: {'blue': 59, 'red': 41}
+27.150464662988533  seconds
+Final win counts: {'blue': 62, 'red': 38}
+27.023701156465393  seconds
+Final win counts: {'blue': 57, 'red': 43}
+26.860728145351306  seconds
+Final win counts: {'red': 52, 'blue': 48}
+27.005446481915087  seconds
+Final win counts: {'red': 56, 'blue': 44}
+27.850751035295573  seconds
+
+>Red wins with an average of 46.0% win rate. Blue is at 54.0%.
+
+BLUE_NUM_NODES:  100
+RED_NUM_NODES:  200
+
+Final win counts: {'blue': 54, 'red': 46}
+41.50831740509377  seconds
+Final win counts: {'red': 42, 'blue': 58}
+41.718987133566486  seconds
+Final win counts: {'blue': 54, 'red': 46}
+41.65284885884684  seconds
+Final win counts: {'red': 56, 'blue': 44}
+41.49697611452076  seconds
+Final win counts: {'red': 53, 'blue': 47}
+40.78732352134576  seconds
+
+>Red wins with an average of 48.6% win rate. Blue is at 51.4%.
+
+BLUE_NUM_NODES:  100
+RED_NUM_NODES:  500
+
+Final win counts: {'blue': 61, 'red': 39}
+84.40254941434318  seconds
+Final win counts: {'blue': 47, 'red': 53}
+87.08191771204238  seconds
+Final win counts: {'red': 51, 'blue': 49}
+86.88374193147865  seconds
+Final win counts: {'blue': 60, 'red': 40}
+84.51480134261219  seconds
+Final win counts: {'blue': 54, 'red': 46}
+85.52796058052712  seconds
+
+>Red wins with an average of 45.8%. Blue is at 54.2%
+
+BLUE_NUM_NODES:  100
+RED_NUM_NODES:  1000
+
+Final win counts: {'red': 51, 'blue': 49}
+165.17888749046787  seconds
+Final win counts: {'blue': 54, 'red': 46}
+164.38766439047242  seconds
+Final win counts: {'blue': 57, 'red': 43}
+161.28263209078665  seconds
+Final win counts: {'blue': 51, 'red': 49}
+165.639463697534  seconds
+Final win counts: {'blue': 61, 'red': 39}
+160.50966398534635  seconds
+
+>Red wins with an average of 45.6%. Blue is at 54.4%

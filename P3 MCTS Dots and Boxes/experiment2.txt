@@ -1,0 +1,27 @@
+Experiment 2 - Heuristic Improvement
+
+Given the same amount of num_nodes, mcts_vanilla gets absolutely destroyed by mcts_modified. But if vanilla
+kept 1000 num_nodes and modified was limited to 3 or less, then the games start becoming a little more
+exciting. 
+
+TEST
+
+BLUE_NUM_NODES:  1000
+RED_NUM_NODES:  1000
+Final win counts: {'red': 98, 'blue': 2}
+221.01787546884705  seconds
+
+BLUE_NUM_NODES:  1000
+RED_NUM_NODES:  3
+Final win counts: {'blue': 40, 'red': 60}
+142.4106087355554  seconds
+
+BLUE_NUM_NODES:  1000
+RED_NUM_NODES:  2
+Final win counts: {'blue': 80, 'red': 20}
+165.20601653848874  seconds
+
+BLUE_NUM_NODES:  1000
+RED_NUM_NODES:  1
+Final win counts: {'blue': 100}
+168.90884054896188  seconds
